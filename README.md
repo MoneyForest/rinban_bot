@@ -1,12 +1,29 @@
-## how to use
+## How To Use
 
-`cd rinban_bot`
+- poetryのインストール
 
-`pip3 install requests -t .`
+https://python-poetry.org/docs/
 
-## 不要ファイルの削除
-`rm -rf *.dist-info`
-`rm -rf bin`
+- パッケージのインストール
+
+$ poetry install
+
+- PATHを通す
+
+ENVIRONMENT             : 開発環境=DEVELOPMENT 本番環境=PRODUCTION
+
+WEBHOOK_URL             : webhookのURL
+                          ex) https://hooks.slack.com/services/TXXXXXXXX/
+
+DEVELOPMENT_CHANNEL_URL : 開発環境で投稿するチャンネルのURL
+                          ex) BXXXXXXXX/XXXXXXXXXXXXXXXXXXXXXXXX
+
+PRODUCTION_CHANNEL_URL  : 本番環境で投稿するチャンネルのURL
+                          ex) BZZZZZZZZ/ZZZZZZZZZZZZZZZZZZZZZZZZ
+
+SLACK_SIGNING_SECRET    : slack bot apiのsecret
+
+SLACK_BOT_TOKEN         : slack bot apiのtoken
 
 ---
 
