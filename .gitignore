@@ -129,12 +129,5 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-# third party library
-certifi/
-chardet/
-idna/
-requests/
-urllib3/
-
 # zip
 *.zip
