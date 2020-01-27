@@ -5,13 +5,14 @@ import requests
 import datetime
 
 WEBHOOK_URL = os.environ['WEBHOOK_URL']
-MFX_DEV_URL = os.environ['MFX_DEV_URL']
+DEVELOPMENT_URL = os.environ['DEVELOPMENT_CHANNEL_URL']
+PRODUCTION_URL = os.environ['PRODUCTION_CHANNEL_URL']
+ENVIRONMENT = os.environ['ENVIRONMENT']
 
 def post_message():
-    url = WEBHOOK_URL + MFX_DEV_URL
     assignee = assignor()
     sentence = make_sentence(assignee)
-    requests.post(url, data=json.dumps({ "text": sentence }))
+    requests.post(make_url(), data=json.dumps({ "text": sentence }))
 
 def assignor():
     with open('rotation.json', 'r') as f:
@@ -21,6 +22,15 @@ def assignor():
 def make_sentence(assignee):
     sentence = '今日は ' + assignee + ' Trello見てね！ :pray:'
     return sentence
+
+def make_url():
+    url = ''
+    if ENVIRONMENT == 'DEVELOPMENT':
+        url = WEBHOOK_URL + DEVELOPMENT_URL
+    elif ENVIRONMENT == 'PRODUCTION':
+        url = WEBHOOK_URL + PRODUCTION_URL
+    return url
+
 
 def weekday():
     weekday = datetime.date.today().weekday()
