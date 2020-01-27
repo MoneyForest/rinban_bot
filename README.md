@@ -1,13 +1,15 @@
-## 輪番作業アサイン用のSlackbot
+## how to use
 
 `cd rinban_bot`
 
 `pip3 install requests -t .`
 
+# 不要ファイルの削除
+`rm -rf *.dist-info`
+`rm -rf bin`
+
 ---
 
-### zipにしてデプロイ
+### zip化するshell
 
-`chmod -R 755 ./*`
-
-`zip -r zip_file ./*`
+./zipper.sh
