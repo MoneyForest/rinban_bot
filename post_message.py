@@ -5,7 +5,6 @@ import requests
 import datetime
 
 WEBHOOK_URL = os.environ['WEBHOOK_URL']
-TIMES_MONEYFOREST_URL = os.environ['TIMES_MONEYFOREST_URL']
 MFX_DEV_URL = os.environ['MFX_DEV_URL']
 
 def post_message():
