@@ -19,7 +19,7 @@ def assignor():
         return assignee
 
 def make_sentence(assignee):
-    sentence = '今日は ' + assignee + ' Trello見てね!'
+    sentence = '今日は ' + assignee + ' Trello見てね！ :pray:'
     return sentence
 
 def weekday():

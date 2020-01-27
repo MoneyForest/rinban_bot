@@ -135,3 +135,6 @@ chardet/
 idna/
 requests/
 urllib3/
+
+# zip
+*.zip
