@@ -11,7 +11,7 @@ $ poetry install
 - PATHを通す
 
 ```
-ENVIRONMENT             : 開発環境=DEVELOPMENT 
+ENVIRONMENT             : 開発環境=DEVELOPMENT
                           本番環境=PRODUCTION
 
 WEBHOOK_URL             : webhookのURL
