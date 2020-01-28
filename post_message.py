@@ -5,8 +5,8 @@ import requests
 import datetime
 
 WEBHOOK_URL = os.environ['WEBHOOK_URL']
-DEVELOPMENT_URL = os.environ['DEVELOPMENT_CHANNEL_URL']
-PRODUCTION_URL = os.environ['PRODUCTION_CHANNEL_URL']
+DEVELOPMENT_CHANNEL_URL = os.environ['DEVELOPMENT_CHANNEL_URL']
+PRODUCTION_CHANNEL_URL = os.environ['PRODUCTION_CHANNEL_URL']
 ENVIRONMENT = os.environ['ENVIRONMENT']
 
 def post_message():
@@ -26,9 +26,9 @@ def make_sentence(assignee):
 def make_url():
     url = ''
     if ENVIRONMENT == 'DEVELOPMENT':
-        url = WEBHOOK_URL + DEVELOPMENT_URL
+        url = WEBHOOK_URL + DEVELOPMENT_CHANNEL_URL
     elif ENVIRONMENT == 'PRODUCTION':
-        url = WEBHOOK_URL + PRODUCTION_URL
+        url = WEBHOOK_URL + PRODUCTION_CHANNEL_URL
     return url
 
 

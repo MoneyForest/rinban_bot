@@ -1,17 +1,7 @@
 ## How To Use
 
-- poetryのインストール
-
-https://python-poetry.org/docs/
-
-- パッケージのインストール
-
-$ poetry install
-
-- PATHを通す
-
 ```
-ENVIRONMENT             : 開発環境=DEVELOPMENT 
+ENVIRONMENT             : 開発環境=DEVELOPMENT
                           本番環境=PRODUCTION
 
 WEBHOOK_URL             : webhookのURL
@@ -27,9 +17,3 @@ SLACK_SIGNING_SECRET    : slack bot apiのsecret
 
 SLACK_BOT_TOKEN         : slack bot apiのtoken
 ```
-
----
-
-### zip化するshell(lambdaデプロイ用)
-
-./zipper.sh
