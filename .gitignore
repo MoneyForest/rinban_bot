@@ -131,3 +131,10 @@ dmypy.json
 
 # zip
 *.zip
+
+# packages
+certifi
+chardet
+idna
+requests
+urllib3
